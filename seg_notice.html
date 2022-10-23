@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, maximum-scale=1.0, user-scalable=no">
+<meta name="author" content="allisxen@gmail.com">
+<title>soolchin9</title>
+<link rel="preconnect" href="//fonts.gstatic.com">
+<link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+<link href="//fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&family=Noto+Serif+KR:wght@200;400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+<link rel="stylesheet" href="css/mystyle.css">
+<script src="//cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+</head>
+<body>
+<div class="seg">
+    <div id="notice"><span class="title">공지</span>
+        <div class="notice__slider">
+            <div>신데렐라는 어려서 부모님을 잃고요 계모와 언니들에게 72가지의 살인기술을 전수받았다.</div>
+            <div>생전의 네 양친처럼 자상하고 행복하게 해줄수는 없으니 네 몸을 지키는 방법 이라도 알려주겠다.</div>
+            <div>우리가 오늘밤 열리는 무도회에서 돌아 오지 않는다면 왕자에게 패해 처형당한 것으로 알거라, 신데렐라</div>
+        </div><!-- / .notice__slider -->
+    </div><!-- / #notice -->
+</div><!-- / .seg -->
+<script>
+$(document).ready(function() {
+$('.notice__slider').slick({
+		slidesToShow: 1,
+		slidesToScroll: 1,
+		dots: false,
+		arrows: false,
+		autoplay: true,
+		speed: 700,
+		autoplaySpeed: 3000
+	});
+});
+</script>
+<script src="js/myfunction.js"></script>
+</body>
+</html>
