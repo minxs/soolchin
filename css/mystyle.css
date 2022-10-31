@@ -28,6 +28,7 @@ allisxen@gmail.com
   --bs-btn-hover-border-color: #7F0000;
 }
 body{font-size:1rem;}
+body.seg{ background-color:transparent!important; background-color:rgba(0,0,0,0);}
 body,h1, h2, h3, h4, h5, h6,textarea, select{font-family: var(--bs-body-font-family), sans-serif;}
 a,
 .btn-link{ text-decoration:none;}
@@ -35,19 +36,19 @@ a,
 ul{ padding-left:0; margin-bottom:0; list-style:none;}
 
 .wrapper{ display: grid; width:100%;
-  grid-template-columns: 140px calc(100% - 140px);
-  grid-template-rows: 160px auto;
+  grid-template-columns: 8% calc(100% - 8%);
+  grid-template-rows: auto 1fr;
   grid-template-areas:
     "logo main"
     "ranking main";
-background: linear-gradient(90deg, var(--main-color) 140px, var(--bs-body-bg) 140px)
+/*background: linear-gradient(90deg, var(--main-color) 140px, var(--bs-body-bg) 140px)*/
 }
 
 .logo{grid-area:logo; background-color:var(--bs-body-bg)}
 main{grid-area:main; position:relative; /*height:100vh*/}
-.ranking{grid-area:ranking;overflow-y: auto;}
+.ranking{grid-area:ranking;overflow-y: auto; overflow-x:hidden}
 
-.logo{ padding:1em;}
+.logo{ padding:1em; aspect-ratio:1;}
 .logo h1{ font-size:1.5em; color:#fff; text-align:center; font-weight:700;}
 .logo img{ width:70%;}
 .ranking{ background:var(--main-color); padding:0 1.4em 0 .8rem}
@@ -72,7 +73,7 @@ display: inline-block;}
 [data-state="is-onair"] a:after{content: '\25CF';color: #CCFF00;font-size: .3em;transform: translate(4px,-150%);display: inline-block;}
 
 
-.vid{background: linear-gradient(180deg, var(--main-color) 80px, var(--bs-body-bg) 80px); position:relative; margin-bottom:2rem;}
+.vid{background: linear-gradient(180deg, var(--main-color) 80px, var(--bs-body-bg) 80px); position:relative;}
 .vid.is-covered{ opacity:.1}
 
 .slick-slider {overflow: hidden;}
@@ -90,7 +91,7 @@ display: inline-block;}
 --arrow-color-hover:#fff;
 --arrow-boxsize:48px;
 --arrow-size:24px;
---arrow-position : 15%;
+--arrow-position : 2%;
 --arrow-thickness : 3px;
 padding-top:1.25rem;
 }
@@ -125,14 +126,6 @@ pointer-events: auto;
 }
 #splash .slick-active{ opacity:1;pointer-events: auto;}
 
-
-
-
-
-
-
-
-
 #splash .slick-slide {margin: 0 -3%;}
 @media (max-width: 991.98px) {
 #splash{--arrow-position : 2%;}
@@ -150,10 +143,9 @@ pointer-events: auto;
 #current-room .room__info{ font-size:2.6em; font-weight:900;text-shadow: #000 1px 0 6px;}
 #current-room .room__info p{ font-size:.4em; font-weight:400; line-height:1;}
 #current-room .room__info p b{ color:#fff; background:rgba(0,0,0,.5); border-radius:var(--box-radius); font-size:.75em; padding:.25em .75em;}
-
 .seg #current-room{ position:relative; transform:none; bottom:unset; left:unset;}
 
-.channel{ padding:1em 2rem; margin-right:1em; /*position: fixed;*/bottom: 1rem; aspect-ratio:6/1; overflow-y:auto; /*max-height:400px;*/ transition: all ease .5s 0s;}
+.channel{ padding:0 2rem 1em; margin-right:1em; /*position: fixed;*/bottom: 1rem; aspect-ratio:6/1; overflow-y:auto; /*max-height:400px;*/ transition: all ease .5s 0s;}
 
 .channel a{ color:#fff;}
 .channel[data-state="is-expand"]{aspect-ratio:auto; position:fixed; width: calc(100% - 160px); left:160px; top:10rem; bottom:auto; max-height:calc(100vh - 10rem);}
@@ -181,13 +173,16 @@ place-items: center;place-content: center; font-family:Montserrat, sans-serif; f
 
 @media screen and (min-width:2560px) { 
 .channel{aspect-ratio:6/1;max-height: none;}
+.wrapper{grid-template-columns: 8% calc(100% - 8%);}
 }
 
-@media (max-width: 991.98px) {
+@media (max-width: 1200.98px) {
+.wrapper{grid-template-columns: 14% calc(100% - 14%);}
 .channel{aspect-ratio:auto;}
 }
 @media (max-width: 767.98px) {
 .wrapper{ display:block; background:var(--bs-body-bg);}
+.logo{aspect-ratio:auto;}
 .logo img{ height:70px; width:auto;}
 .ranking h2{ width:80%;}
 .ranking ul{display: grid;grid-template-columns: repeat(3, 1fr);gap: .4em;}
